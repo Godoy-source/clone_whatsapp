@@ -1,4 +1,5 @@
 import 'package:clone_whatsapp/HomePage/home.dart';
+import 'package:clone_whatsapp/Utils/textUtil.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -51,10 +52,10 @@ class _CardChatWidget extends State<CardChat> {
         );
       },
       child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 14.0),
           decoration: BoxDecoration(
             border:
-                Border(bottom: BorderSide(color: detalhesCores, width: 1.0)),
+                Border(top: BorderSide(color: detalhesCores, width: 1.0)),
           ),
           child: Row(children: [
             Container(
@@ -62,24 +63,18 @@ class _CardChatWidget extends State<CardChat> {
                 shape: BoxShape.circle,
                 border: Border.all(color: detalhesCores, width: 1.0),
               ),
-              child: CircleAvatar(backgroundImage: NetworkImage(urlImage)),
+              child: CircleAvatar(
+                  backgroundImage: NetworkImage(urlImage),
+                  radius: 26
+              ),
             ),
             SizedBox(width: 8.0),
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Container(
-                child: Text(
-                  nameOfPerson,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16.0,
-                  ),
-                ),
-              ),
-              Container(
-                child: Text(lastMessage),
-              ),
+              MyTextFormat(message: nameOfPerson, fontSize: 16.0, fontWeight: FontWeight.bold),
+              MyTextFormat(message: lastMessage, color: Colors.grey)
             ])
           ])),
     );
   }
 }
+
