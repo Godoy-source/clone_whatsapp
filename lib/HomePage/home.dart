@@ -30,31 +30,23 @@ class HomePage extends StatelessWidget {
         child: Scaffold(
             appBar: const MyAppBar(),
             backgroundColor: Theme.of(context).primaryColor,
-            body: TabBarView(children: [
-              ListView.builder(
-                  itemCount: dataList.length,
-                  itemBuilder: (context, index) {
-                    return CardChat(
-                        nameOfPerson: dataList[index]['nameOfPerson']!,
-                        urlImage: dataList[index]['urlImage']!,
-                        lastMessage: dataList[index]['lastMessage']!
-                    );
-                  }),
-              Container(
-                child: Text("Pagina 02"),
-              ),
-              Container(
-                child: Text("Pagina 03"),
-              )
-            ]),
-            floatingActionButton: FloatingActionButton(
-              backgroundColor: Color(0xff075e54),
-              onPressed: () {
-                // Implementar ação do botão de chat
-              },
-              child: const Icon(Icons.message),
-            ),
-            bottomNavigationBar: Footer()
+            body: ListView.builder(
+                itemCount: dataList.length,
+                itemBuilder: (context, index) {
+                  return CardChat(
+                      nameOfPerson: dataList[index]['nameOfPerson']!,
+                      urlImage: dataList[index]['urlImage']!,
+                      lastMessage: dataList[index]['lastMessage']!
+                  );
+                }),
+            // floatingActionButton: FloatingActionButton(
+            //   backgroundColor: const Color(0xff075e54),
+            //   onPressed: () {
+            //     // Implementar ação do botão de chat
+            //   },
+            //   child: const Icon(Icons.message),
+            // ),
+            // bottomNavigationBar: Footer()
         ),
       ),
     );
@@ -94,3 +86,41 @@ class DetalhesChatScreen extends StatelessWidget {
     );
   }
 }
+
+
+
+// Teste
+// MaterialApp(
+// home: DefaultTabController(
+// length: 3,
+// child: Scaffold(
+// appBar: const MyAppBar(),
+// backgroundColor: Theme.of(context).primaryColor,
+// body: TabBarView(children: [
+// ListView.builder(
+// itemCount: dataList.length,
+// itemBuilder: (context, index) {
+// return CardChat(
+// nameOfPerson: dataList[index]['nameOfPerson']!,
+// urlImage: dataList[index]['urlImage']!,
+// lastMessage: dataList[index]['lastMessage']!
+// );
+// }),
+// Container(
+// child: Text("Pagina 02"),
+// ),
+// Container(
+// child: Text("Pagina 03"),
+// )
+// ]),
+// floatingActionButton: FloatingActionButton(
+// backgroundColor: const Color(0xff075e54),
+// onPressed: () {
+// // Implementar ação do botão de chat
+// },
+// child: const Icon(Icons.message),
+// ),
+// bottomNavigationBar: Footer()
+// ),
+// ),
+// );

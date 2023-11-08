@@ -8,12 +8,12 @@ class MyAppBar extends StatefulWidget implements PreferredSizeWidget {
   _MyAppBarState createState() => _MyAppBarState();
 
   @override
-  Size get preferredSize => _MyAppBarState().getPreferredSize();
+  Size get preferredSize => AppBar().preferredSize;
 
 }
 
 class _MyAppBarState extends State<MyAppBar> {
-  Color primaryColor = const Color(0xff128c7e);
+  Color primaryColor = const Color(0xff2a068f);
   Color navbarSelectedColor = const Color(0xff25d366);
 
   @override
@@ -35,17 +35,17 @@ class _MyAppBarState extends State<MyAppBar> {
           },
         ),
       ],
-      bottom: TabBar(
-        indicatorColor: navbarSelectedColor,
-        labelColor: navbarSelectedColor,
-        unselectedLabelColor: Colors.white54,
-        indicatorWeight: 2.5,
-        tabs: [
-          Tab(text: 'Conversas'),
-          Tab(text: 'Atualizações'),
-          Tab(text: 'Chamadas'),
-        ],
-      )
+      // bottom: TabBar(
+      //   indicatorColor: navbarSelectedColor,
+      //   labelColor: navbarSelectedColor,
+      //   unselectedLabelColor: Colors.white54,
+      //   indicatorWeight: 2.5,
+      //   tabs: [
+      //     Tab(text: 'Conversas'),
+      //     Tab(text: 'Atualizações'),
+      //     Tab(text: 'Chamadas'),
+      //   ],
+      // )
     );
   }
   Size getPreferredSize() {
