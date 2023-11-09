@@ -38,6 +38,7 @@ class _MyAppBarState extends State<MyAppBar> {
                 value: 'opcao1',
                 child: Row(children: [
                   Icon(Icons.account_circle, color: Colors.white),
+                  SizedBox(width: 6),
                   MyTextFormat(message: 'Perfil', color: Colors.white),
                 ]),
               ),
@@ -45,6 +46,7 @@ class _MyAppBarState extends State<MyAppBar> {
                 value: 'opcao2',
                 child: Row(children: [
                   Icon(Icons.exit_to_app, color: Colors.red),
+                  SizedBox(width: 6),
                   MyTextFormat(message: 'Sair', color: Colors.red)
                 ]),
               ),
@@ -70,37 +72,3 @@ class _MyAppBarState extends State<MyAppBar> {
         tabBarSize.height + appBarSize.height);
   }
 }
-//
-// class TopBar extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: EdgeInsets.all(8.0),
-//       child: Row(
-//         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//         children: [
-//           Text(
-//             'WhatsApp',
-//             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-//           ),
-//           Row(
-//             children: [
-//               IconButton(
-//                 icon: Icon(Icons.search),
-//                 onPressed: () {
-//                   // Implementar ação de pesquisa
-//                 },
-//               ),
-//               IconButton(
-//                 icon: Icon(Icons.more_vert),
-//                 onPressed: () {
-//                   // Implementar ação de mais opções
-//                 },
-//               ),
-//             ],
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
