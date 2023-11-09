@@ -28,32 +28,21 @@ class HomePage extends StatelessWidget {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
-            appBar: const MyAppBar(),
-            backgroundColor: Theme.of(context).primaryColor,
-            body: ListView.builder(
-                itemCount: dataList.length,
-                itemBuilder: (context, index) {
-                  return CardChat(
-                      nameOfPerson: dataList[index]['nameOfPerson']!,
-                      urlImage: dataList[index]['urlImage']!,
-                      lastMessage: dataList[index]['lastMessage']!
-                  );
-                }),
-            // floatingActionButton: FloatingActionButton(
-            //   backgroundColor: const Color(0xff075e54),
-            //   onPressed: () {
-            //     // Implementar ação do botão de chat
-            //   },
-            //   child: const Icon(Icons.message),
-            // ),
-            // bottomNavigationBar: Footer()
+          appBar: const MyAppBar(),
+          backgroundColor: Theme.of(context).primaryColor,
+          body: ListView.builder(
+              itemCount: dataList.length,
+              itemBuilder: (context, index) {
+                return CardChat(
+                    nameOfPerson: dataList[index]['nameOfPerson']!,
+                    urlImage: dataList[index]['urlImage']!,
+                    lastMessage: dataList[index]['lastMessage']!);
+              }),
         ),
       ),
     );
   }
 }
-
-
 
 class DetalhesChatScreen extends StatelessWidget {
   final String nameOfPerson;
@@ -86,8 +75,6 @@ class DetalhesChatScreen extends StatelessWidget {
     );
   }
 }
-
-
 
 // Teste
 // MaterialApp(
