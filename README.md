@@ -9,6 +9,6 @@ Funcionalidades:
  - Adicionar novos contatos
 
 Telas: 
- - Login ![Screenshot_1](https://github.com/Godoy-source/clone_whatsapp/assets/Screenshot_1)
+ - Login [(https://prnt.sc/azklLjm7uTcf)](https://prnt.sc/azklLjm7uTcf)
  - Cadastro ![Screenshot_2](https://github.com/Godoy-source/clone_whatsapp/assets/Screenshot_2)
  - 
